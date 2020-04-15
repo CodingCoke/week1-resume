@@ -1,0 +1,250 @@
+/* 基礎設置 */
+body {
+  font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 90px;
+  width: 288px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 45px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+span {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 16px;
+}
+
+.title span {
+  color: #a00404;
+  margin-left: 16px;
+  font-weight: bold;
+}
+
+.skills .title span, .footer .title span {
+  color: #fff;
+}
+
+p, li {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 表頭 */
+.header {
+  border-bottom: 2px solid #000;
+  padding-top: 48px;
+  padding-bottom: 24px;
+  margin-bottom: 46px;
+}
+
+/* content */
+.avatar {
+  margin-bottom: 48px;
+}
+
+.profile-item-text {
+  margin-bottom: 24px;
+}
+
+.content .profile-item .profile-item-text:last-child {
+  margin-bottom: 72px;
+}
+
+.content .information {
+  margin-bottom: 72px;
+}
+
+.content .information .list {
+  padding-left: 48px;
+}
+
+/* content-個人資料、學歷 */
+/* 以下為區域為時間軸設計，作法參照攻略 Saffran 的 codepen */
+.profile li, .education li {
+  /* 讓偽元素以 li 作為定位點，因此 li 需設定為 relative */
+  /* 攻略是以 ul 為定位點，改以 li 為定位點的好處在於可以依每個 li 位置設定座標，不會重疊*/
+  position: relative;
+}
+
+.profile li::before, .education li::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #96a9ca;
+  border-radius: 50%;
+  top: 10px;
+  left: -35px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  border-left: 1px solid #96a9ca;
+  /* 設 top 和 bottom 線條才有高度 */
+  top: 12px;
+  bottom: -50px;
+  left: -28px;
+}
+/* 以上為時間軸設計 */
+
+.education-item {
+  margin-bottom: 32px;
+}
+
+.education-item:last-child {
+  margin-bottom: 72px;
+}
+
+/* content-技能 */
+.skills {
+  background-color: #415165;
+  color: #fff;
+  position: relative;
+  padding-top: 24px;
+  margin-bottom: 72px;
+}
+
+.content .skills .list {
+  padding-left: 24px;
+}
+
+.skills .title {
+  justify-content: center;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 40px;
+}
+
+.skills-container::before {
+  content: "";
+  position: absolute;
+  width: 9999px;
+  height: 360px;
+  background-color: #96a9ca;
+  z-index: -1;
+  top: 60px;
+  left: -5000px;
+}
+
+.skills-container {
+  width: 996px;
+  margin: 0 auto;
+  padding-bottom: 56px;
+}
+
+.skills-list {
+  width: 216px;
+  margin: 0 auto;
+  border-left: 1px solid #96a9ca;
+}
+
+.skills-container .skills-list .skill {
+  margin-bottom: 16px;
+}
+
+.skills-container .skills-list .skill:last-child {
+  margin-bottom: 0px;
+}
+
+/* content-工作經驗 */
+.experience .title {
+  margin-bottom: 22px;
+}
+
+.experience-list {
+  width: 642px;
+}
+
+.experience-detail {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.content .information .experience-list {
+  /* 用 border 做左邊那條線 */
+  border-left: 1px solid #96a9ca;
+  padding-left: 0;
+  /* 為了讓 border 出現在對的地方，改變原本的推擠方式(pdl48px->ml24px+pl24px) */
+  margin-left: 24px;
+  padding-left: 24px;
+}
+
+.experience-list-item {
+  margin-bottom: 32px;
+}
+
+.experience .company-logo {
+  margin: 8px 0;
+}
+
+/* 表尾 */
+.footer {
+  background-color: #415165;
+  color: #fff;
+  text-align: center;
+}
+
+.footer .title {
+  padding-top: 24px;
+  justify-content: center;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 32px;
+}
+
+.contact-method .contact-method-item {
+  margin-bottom: 16px;
+  font-weight: lighter;
+}
+
+.contact-method .works-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-method .works-link:hover {
+  color: lightslategray;
+}
+
+.footer .contact-links {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 48px;
+}
+
+.contact-links .contact-links-item {
+  padding: 0 12px;
+}
+
+.contact-link-icon:hover {
+  width: 60px;
+  height: 60px;
+}
