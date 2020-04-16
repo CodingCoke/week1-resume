@@ -1,6 +1,8 @@
 /* 基礎設置 */
 body {
   font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+  width: 1920px;
+  margin: 0 auto;
 }
 
 img {
@@ -141,24 +143,24 @@ p, li {
 .skills .title {
   justify-content: center;
   border-bottom: 1px solid #fff;
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
+}
+
+.skills-container {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 56px;
 }
 
 .skills-container::before {
   content: "";
   position: absolute;
-  width: 9999px;
+  width: 1920px;
   height: 360px;
   background-color: #96a9ca;
-  z-index: -1;
-  top: 60px;
-  left: -5000px;
-}
-
-.skills-container {
-  width: 996px;
-  margin: 0 auto;
-  padding-bottom: 56px;
+  z-index: -2;
+  top: 67px;
+  left: -360px;
 }
 
 .skills-list {
