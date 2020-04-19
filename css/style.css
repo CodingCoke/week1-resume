@@ -1,6 +1,6 @@
 /* 基礎設置 */
 body {
-  font-family: "Microsoft JhengHei", Arial, Helvetica, sans-serif;
+  font-family: PingFang TC, "Microsoft JhengHei", Arial, Helvetica, sans-serif;
   width: 1920px;
   margin: 0 auto;
 }
@@ -11,8 +11,9 @@ img {
 
 h1 {
   font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 2px;
   line-height: 90px;
-  width: 288px;
 }
 
 h2 {
@@ -60,6 +61,10 @@ p, li {
   margin: 0 auto;
 }
 
+.list {
+  padding-left: 48px;
+}
+
 /* 表頭 */
 .header {
   border-bottom: 2px solid #000;
@@ -79,14 +84,6 @@ p, li {
 
 .content .profile-item .profile-item-text:last-child {
   margin-bottom: 72px;
-}
-
-.content .information {
-  margin-bottom: 72px;
-}
-
-.content .information .list {
-  padding-left: 48px;
 }
 
 /* content-個人資料、學歷 */
@@ -191,10 +188,9 @@ p, li {
   line-height: 30px;
 }
 
-.content .information .experience-list {
+.content .experience .experience-list {
   /* 用 border 做左邊那條線 */
   border-left: 1px solid #96a9ca;
-  padding-left: 0;
   /* 為了讓 border 出現在對的地方，改變原本的推擠方式(pdl48px->ml24px+pl24px) */
   margin-left: 24px;
   padding-left: 24px;
@@ -202,6 +198,10 @@ p, li {
 
 .experience-list-item {
   margin-bottom: 32px;
+}
+
+.experience-list-item:last-child {
+  margin-bottom: 72px;
 }
 
 .experience .company-logo {
@@ -247,6 +247,5 @@ p, li {
 }
 
 .contact-link-icon:hover {
-  width: 60px;
-  height: 60px;
+  opacity: 0.8;
 }
